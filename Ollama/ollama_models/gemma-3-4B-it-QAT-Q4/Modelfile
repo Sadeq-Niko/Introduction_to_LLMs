@@ -1,0 +1,5 @@
+FROM ./
+TEMPLATE """
+{{ .Prompt }}
+"""
+PARAMETER temperature 0.7
