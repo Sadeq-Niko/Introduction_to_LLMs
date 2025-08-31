@@ -1,4 +1,3 @@
----
 
 # Agentic Systems
 
@@ -12,5 +11,3 @@ We explore different libraries and frameworks that support agentic design:
 * **LangGraph (coming soon)** → Graph-based orchestration of agent workflows.
 
 Each subdirectory contains a self-contained example with installation and usage instructions.
-
----
