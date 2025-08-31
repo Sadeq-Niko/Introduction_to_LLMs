@@ -1,4 +1,48 @@
-1. Install UV package manager with ```pip install uv``` or ```curl -LsSf https://astral.sh/uv/install.sh | sh```
-2. Install crewai using ```uv tool install crewai```
-3. Initiate a crew using ```crewai create crew <crew_name?>```
-4. Begin exploring crews capabilities
+---
+
+# CrewAI
+
+This subdirectory demonstrates how to build a simple **agentic system** using [CrewAI](https://docs.crewai.com).
+
+---
+
+## 🔧 Installation
+
+1. Install [uv](https://astral.sh/uv):
+
+   ```bash
+   pip install uv
+   # or
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   ```
+
+2. Install CrewAI:
+
+   ```bash
+   uv tool install crewai
+   ```
+
+---
+
+## ⚡ Usage
+
+1. Create a crew:
+
+   ```bash
+   crewai create crew demo_crew
+   ```
+
+2. Configure agents & tasks:
+
+   * `src/mahpad/config/agents.yaml`
+   * `src/mahpad/config/tasks.yaml`
+
+3. Run the example:
+
+   ```bash
+   uv run src/mahpad/main.py
+   # or 
+   crewai run demo_crew
+   ```
+
+---
