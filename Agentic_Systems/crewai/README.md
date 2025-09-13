@@ -1,10 +1,7 @@
----
 
 # CrewAI
 
 This subdirectory demonstrates how to build a simple **agentic system** using [CrewAI](https://docs.crewai.com).
-
----
 
 ## 🔧 Installation
 
