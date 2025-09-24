@@ -23,10 +23,16 @@ This subdirectory demonstrates how to build a simple **agentic system** using [C
 
 ## ⚡ Usage
 
-1. Create a crew:
+1. Create a crew or flow:
 
    ```bash
    crewai create crew demo_crew
+   ```
+
+   or
+
+   ```bash
+   crewai create flow demo_flow
    ```
 
 2. Configure agents & tasks:
@@ -38,8 +44,10 @@ This subdirectory demonstrates how to build a simple **agentic system** using [C
 
    ```bash
    uv run src/mahpad/main.py
-   # or 
+   # or
    crewai run demo_crew
+   # for flow
+   crewai flow kickoff
    ```
 
 ---
