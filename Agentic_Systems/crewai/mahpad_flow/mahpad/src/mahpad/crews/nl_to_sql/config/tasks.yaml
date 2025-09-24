@@ -1,0 +1,8 @@
+query_generation:
+  description: >
+    Analyse user "{query}" and translate it into accurate and efficient
+    SQL queries that later will be executed on the database(postgres).
+  expected_output: >
+    raw sql query without ```sql tag in the following json format:
+    {"sql_query":""}
+  agent: sql_query_translator
