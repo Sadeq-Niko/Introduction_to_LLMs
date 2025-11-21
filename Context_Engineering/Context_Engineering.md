@@ -108,3 +108,35 @@ Based on the task characteristic we could **choose between these approaches**. f
 - **Complex** research and analysis --> **Multi-agent architectures**
 
 ---
+# How Anthropic manage context on the Claude Developer Platform
+
+* **Context editing**: Automatically **clears** stale **tool calls** and **results** from within the context window when it reached it's **limit**.
+* **The memory tool**: Store information **outside** the context window thorough a **file-based** system.(use tool calls)
+It's important to understand that a big tech company like Anthropic developed a multi million dollar advanced developing tool just by using these two components which represents the importance of **Context Engineering**
+
+---
+# How Anthropic built their multi-agent research system
+
+* **Benefits** of **MAS**: As research involves open-ended problems, there is a need for dynamic and path-dependent solution. Automated Agentic systems inherently follow this approach. Sub-agents can follow separate research paths which enhance the search thorough various topics.
+* **Downside** of **MAS**: These architectures burn through tokens fast. 
+* **Architecture**: **Orchestrator-workers** pattern + dynamic back and forth **retrieval** process.
+* **Prompt Engineering**: 
+	1. When iterating on prompts, **think like your agents**.
+	2. Teach the orchestrator how to **delegate**.
+	3. **Scale** effort to query complexity --> using scaling rules in prompts.
+	4. **Careful** tool design and selection.
+	5. Let agents **improve** themselves(e.g. they found that claude 4 models are excellent prompt engineers).
+	6. Start **wide**, then **narrow down**.
+	7. Guide the **thinking process** --> Extended thinking mode.
+	8. **Parallel tool calling**.
+* **Effective Evaluation**: 
+	1. Start evaluating **immediately** with small samples.
+	2. Use **LLM-as-judge** evaluation --> used a single llm.
+	3. **Human evaluation** catches what automation misses.
+* Production **reliability**:
+	* **Errors compound** : Letting agent know when a tool fail and let it adapt + use **regular checkpoints**.
+	* **Debugging** with **new approaches** : Using full production tracing + monitoring agent **decision patterns** and **interaction structures**.
+	* **Deployment** with **careful coordintation** : As agents run almost continuously, updates must not interrupt working agents.
+	* **Synchronous** execution: It will result in **bottlenecks** but using **asynchronous** will also introduce complexity.
+
+---
